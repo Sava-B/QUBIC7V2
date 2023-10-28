@@ -1,25 +1,31 @@
 import React from 'react'
-import { Typography, Paper, Grid } from "@mui/material";
-
+import { Typography, Paper, Grid, Avatar } from "@mui/material";
+import qubic7logo from "../../assets/better qubic7 logo.png"
 
 function HeaderContainer() {
   return (
-    <Grid item xs={8} sx={{border: 'primary.main'}}>
+    <Grid item container xs={8} sx={{border: 'primary.light', width: '100%'}}>
       <Paper 
-        elevation={20}
+        elevation={5}
         sx={{
             display:'flex',
             height: '30vh',
-            flexDirection: "column",
+            flexDirection: "row",
             justifyContent: "center",
             alignItems: 'center',
-            borderRadius: '1.5rem'
+            borderRadius: '1.5rem',
+            bgcolor: 'secondary.light',
             }}
         >
-        <Typography variant="h3">
-          Welcome to QUBIC7
-        </Typography>
-        <Typography>
+        <Avatar
+          src={qubic7logo.src}
+          sx={{
+            width: '50%',
+            height: '100%',
+            mx: '-8rem'
+          }}
+        />
+        <Typography variant="h2">
             Welcome to the world of QUBIC7, a groundbreaking collection of exclusive NFTs that brings together art, technology, and innovation. 
         </Typography>
       </Paper>

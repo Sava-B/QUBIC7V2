@@ -11,7 +11,7 @@ interface Props {
 const NFTCard: React.FC<Props> = ({ image, startingPrice, name }) => {
   return (
     <Grid item container xs={4} sx={{width: '100%'}}>
-        <Card sx={{borderRadius: '1.5rem'}}>
+        <Card sx={{borderRadius: '1.5rem', bgcolor: 'primary.main'}}>
             <CardMedia>
                 <Avatar
                     src={`${image}`}
