@@ -4,14 +4,14 @@ import qubic7logo from "../../assets/better qubic7 logo.png"
 
 function HeaderContainer() {
   return (
-    <Grid item container xs={8} sx={{border: 'primary.light', width: '100%'}}>
+    <Grid item container xs={12} lg={8} sx={{border: 'primary.light', width: '100%'}}>
       <Paper 
         elevation={5}
         sx={{
             display:'flex',
-            height: '30vh',
-            flexDirection: "row",
-            justifyContent: "center",
+            height: {xs: '40vh', lg: '30vh'},
+            flexDirection: {xs: 'column', lg: "row"},
+            justifyContent: {lg: "center"} ,
             alignItems: 'center',
             borderRadius: '1.5rem',
             bgcolor: 'secondary.light',
@@ -20,12 +20,16 @@ function HeaderContainer() {
         <Avatar
           src={qubic7logo.src}
           sx={{
-            width: '50%',
-            height: '100%',
-            mx: '-8rem'
+            width: {xs: '100%', lg: '50%'},
+            height: {xs: '12rem', lg: '100%'},
+            mx:  '-8rem',
+
           }}
         />
-        <Typography variant="h2">
+        <Typography variant="h2" sx={{display: {xs: 'none', lg: 'inline'}}}>
+            Welcome to the world of QUBIC7, a groundbreaking collection of exclusive NFTs that brings together art, technology, and innovation. 
+        </Typography>
+        <Typography variant="h6" sx={{display: {lg: 'none'}}}>
             Welcome to the world of QUBIC7, a groundbreaking collection of exclusive NFTs that brings together art, technology, and innovation. 
         </Typography>
       </Paper>
