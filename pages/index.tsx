@@ -1,3 +1,5 @@
+
+
 import NFTCard from "@/components/cards/NFTCard";
 import HeaderContainer from "@/components/containers/HeaderContainer";
 import { Grid } from "@mui/material";
@@ -8,7 +10,7 @@ import NFT4 from "./../assets/NFTs/nft4.png"
 import NFT5 from "./../assets/NFTs/nft5.png"
 import NFT6 from "./../assets/NFTs/nft6.png"
 import NFT7 from "./../assets/NFTs/nft7.png"
-import { AppFooter } from "@/components";
+import { AppFooter, NFTListingCard } from "@/components";
 
 const fakeNFTObj = [
   {
@@ -64,7 +66,7 @@ export default function Page() {
         <HeaderContainer />
         <Grid item container xs={12} lg={8} spacing={3} sx={{justifyItems: "center", py: {xs: '2rem', lg:'4rem'} }}>
           {fakeNFTObj.map((obj) => (
-              <NFTCard name={obj.name} startingPrice="1 ETH" image={obj.image}/>
+                <NFTCard name={obj.name} startingPrice="1 ETH" image={obj.image} NFTLink={obj.name}/>
               )
               )}
         </Grid>
